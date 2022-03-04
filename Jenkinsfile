@@ -1,9 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage('Clean workspace') {
+    stage('Buzz Buzz') {
       steps {
-        cleanWs()
+        echo 'testing now'
+      }
+    }
+
+    stage('Tuzz Tuzz') {
+      steps {
+        echo 'UAT  - testing'
+      }
+    }
+
+    stage('Cuzz Cuzz') {
+      steps {
+        echo 'Buzzing !'
       }
     }
 
