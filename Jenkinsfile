@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('Tuzz Tuzz') {
-      steps {
-        echo 'UAT  - testing'
+      parallel {
+        stage('Tuzz Tuzz') {
+          steps {
+            echo 'UAT  - testing'
+          }
+        }
+
+        stage('Test Final') {
+          steps {
+            archiveArtifacts(artifacts: 'target/*.jar ', fingerprint: true)
+          }
+        }
+
       }
     }
 
