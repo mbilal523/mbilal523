@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('Turn Turn') {
+      steps {
+        readTrusted 'https://github.com/mbilal523/mbilal523.git'
+      }
+    }
+
   }
 }
