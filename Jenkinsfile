@@ -9,13 +9,6 @@ pipeline {
 
     stage('Tuzz Tuzz') {
       steps {
-        echo 'UAT  - testing'
-      }
-    }
-
-    stage('Cuzz Cuzz') {
-      steps {
-        echo 'Buzzing !'
         archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
       }
     }
