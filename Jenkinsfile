@@ -13,9 +13,9 @@ pipeline {
       }
     }
 
-    stage('Turn Turn') {
+    stage('UAT-Testing') {
       steps {
-        readTrusted 'https://github.com/mbilal523/mbilal523.git'
+        echo 'Not Dowm '
       }
     }
 
