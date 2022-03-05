@@ -7,9 +7,8 @@ pipeline {
       }
     }
 
-    stage('Tuzz Tuzz') {
+    stage('Tuss Tuss') {
       steps {
-        archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
         echo 'helloword'
       }
     }
