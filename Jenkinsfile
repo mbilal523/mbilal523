@@ -8,25 +8,15 @@ pipeline {
     }
 
     stage('Tuzz Tuzz') {
-      parallel {
-        stage('Tuzz Tuzz') {
-          steps {
-            echo 'UAT  - testing'
-          }
-        }
-
-        stage('Test Final') {
-          steps {
-            archiveArtifacts(artifacts: 'target/*.jar ', fingerprint: true)
-          }
-        }
-
+      steps {
+        echo 'UAT  - testing'
       }
     }
 
     stage('Cuzz Cuzz') {
       steps {
         echo 'Buzzing !'
+        archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
       }
     }
 
